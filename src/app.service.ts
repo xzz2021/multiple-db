@@ -8,12 +8,13 @@ export class AppService {
     private prisma2: pgService,
   ) {}
   async getHello() {
-    // 这里user换成你的数据库表名
-    return await this.prisma.user.findMany();
+    // 这里users换成你的数据库表名
+    console.log('mysql')
+    return await this.prisma.users.findMany();
   }
 
   async getHello2() {
-    // 这里account_account换成你的数据库表名
-    return await this.prisma2.account_account.findMany();
+    // dictionary
+    return await this.prisma2.dictionary.findMany();
   }
 }
