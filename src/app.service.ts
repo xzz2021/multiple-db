@@ -9,7 +9,9 @@ export class AppService {
   ) {}
   async getHello() {
     // 这里users换成你的数据库表名
-    console.log('mysql')
+    // const add = (a: number, b: number) => a + b;
+    // add(1, 2);
+
     return await this.prisma.users.findMany();
   }
 
